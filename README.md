@@ -9,7 +9,7 @@ environments. See the [Java library](https://github.com/whispersystems/libsignal
 
 ### Build dependencies
 
-* [CMake](https://cmake.org/) 2.8.4 or higher
+* [CMake](https://cmake.org/) 2.8.4 or higher, or [Swift](https://swift.org/) 5.2.0 or higher
 * [Check *1](https://libcheck.github.io/check/)
 * [OpenSSL *1](https://www.openssl.org/) 1.0 or higher
  * On MacOS X, [Common Crypto](https://developer.apple.com/library/content/documentation/Security/Conceptual/cryptoservices/GeneralPurposeCrypto/GeneralPurposeCrypto.html) is used instead of OpenSSL
@@ -17,8 +17,8 @@ environments. See the [Java library](https://github.com/whispersystems/libsignal
 
 Most of these dependencies are required just for the unit test suite and
 development of the library itself. When integrating into actual applications,
-you should not need anything beyond CMake. Alternatively, you may integrate
-the code using a build system of your choice.
+you should not need anything beyond CMake or Swift. Alternatively, you may
+integrate the code using a build system of your choice.
 Items marked with *1 are required for tests, with *2 are additionally required for code coverage.
 
 ### Setting up a fresh source tree
@@ -51,6 +51,15 @@ The generated code coverage report can be found in:
 
 CMake provides a tutorial on Eclipse project setup here:
 https://cmake.org/Wiki/CMake:Eclipse_UNIX_Tutorial
+
+It is recommended to follow the more manual "Option 2," since the Eclipse
+project generator built into CMake tends to be outdated and leads you toward
+a very awkward and occasionally broken project configuration.
+
+### Xcode project setup
+
+CMake provides a tutorial on Eclipse project setup here:
+https://preshing.com/20170511/how-to-build-a-cmake-based-project/
 
 It is recommended to follow the more manual "Option 2," since the Eclipse
 project generator built into CMake tends to be outdated and leads you toward
